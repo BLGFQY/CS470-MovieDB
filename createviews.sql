@@ -4,7 +4,6 @@ list.listId AS List_ID,
 list.title AS List_Name
 FROM user
 INNER JOIN list ON user.listId1 = list.listId OR user.listId2 = list.listId
--- WHERE __
 ORDER BY list.listId;
 
 CREATE VIEW list_of_movies_shows AS
@@ -14,7 +13,6 @@ tvshow.title AS Show_Name
 FROM ((list
 INNER JOIN movie ON list.movieId = movie.movieId)
 INNER JOIN tvshow ON list.showId = tvshow.showId)
--- WHERE __
 ORDER BY list.listId;
 
 CREATE VIEW show_details AS
@@ -72,7 +70,6 @@ movie.title AS Movie_Name
 FROM casttab
 LEFT JOIN tvshow ON casttab.showId = tvshow.showId
 LEFT JOIN movie ON casttab.movieId = movie.movieId
--- WHERE __
 ORDER BY casttab.caName;
 
 CREATE VIEW crew_details AS
@@ -85,7 +82,6 @@ movie.title AS Movie_Name
 FROM crew
 LEFT JOIN tvshow ON crew.showId = tvshow.showId
 LEFT JOIN movie ON crew.movieId = movie.movieId
--- WHERE __
 ORDER BY crew.crName;
 
 CREATE VIEW studio_details AS
@@ -97,5 +93,4 @@ movie.title AS Movie_Name
 FROM studio
 LEFT JOIN tvshow ON studio.showId = tvshow.showId
 LEFT JOIN movie ON studio.movieId1 = movie.movieId OR studio.movieId2 = movie.movieId
--- WHERE __
 ORDER BY studio.stName;
