@@ -4,6 +4,6 @@ Goal: Create a database for storing movie and tvshow data
 
 Execution instructions:
 1. Execute "createdatabaseProc.sql" file to initialize database with data
-2. Execute "createviews.sql" to create a specific view for each table
+2. Execute "createviews.sql" to create views for specific database relations
 3. Execute "storedGetters.sql" to create a series of specific tuple getter methods
 4. Use "executionfile.sql" to run specific queries that verify the database runs correctly
